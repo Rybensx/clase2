@@ -1,44 +1,37 @@
 <?php
-class Producto {
-    #DEFINICION DE LOS ATRIBUTOS 
+class Producto{
+    #definicion de los atributos
     public string $nombre;
     public int $precio;
     public bool $disponible;
 
-    #METODO CONSTRUCTOR, SE EJECUTA AL EFECTUAR LA INSTANCIA
+    #metodo constructor, se ejecuta al efectuar la instancia
     public function __construct(string $nombre, int $precio, bool $disponible)
     {
-        #SE LES DA VALORES A LOS ATRIBUTOS CON LOS PARAMETROS QUE RECIBE EL METODO CONSTRUCTOR
-        $this->nombre = $nombre;
-        $this->precio = $precio;
-        $this->disponible = $disponible;
+        $this -> nombre = $nombre;
+        $this -> precio = $precio;
+        $this -> disponible = $disponible;
     }
 
-    #DEFINICION DE METODOS
+    #Definir metodo
     public function mostrarProducto(){
-    echo "El producto es: " . $this->nombre . " y su precio es de: ". $this->precio; 
+        echo "El Producto es: " .$this->nombre ." y su precio es de: " .$this->precio;
     }
-
 }
+//primer objeto
+$producto = new Producto('Tablet',200, true);
+$producto ->mostrarProducto();
 
-//INSTANCIA DE LA CLASE EM EL PRIMER OBJETO
-$producto = new Producto('Tablet', 200, true);
-//LLAMADO AL METODO MOSTRAR PRODUCTO, UTILIZANDO SINTAXIS DE FLECHA ->
-$producto->mostrarProducto();
-
-//IMPRESIÓN EN PANTALLA DEL PRIMER OBJETO
+//impresion del primer objeto
 echo "<pre>";
 var_dump($producto);
-echo "<pre>";
+echo "</pre>";
 
-//INSTANCIA DE LA CLASE EN EL SEGUNDO OBJETO
-$producto2 = new Producto('Monitor Curvo', 300, true);
-// LLAMADO AL METODO MOSTRAR PRODUCTO, UTILIZANDO SINTAXIS DE FLECHA ->
-$producto2->mostrarProducto();
+//segundo objeto
+$producto2 = new Producto('Monitor Curvo',300, true);
+$producto2 ->mostrarProducto();
 
-//IMPRESIÓN EN PANTALLA DEL SEGUNDO OBJETO
+//impresion del segundo objeto
 echo "<pre>";
 var_dump($producto2);
-echo "<pre>";
-
-?>
+echo "</pre>";
